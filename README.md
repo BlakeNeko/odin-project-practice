@@ -15,3 +15,5 @@ A series of practice projects for the Odin Project.
 **etch-a-sketch**: code for [Project: Etch-a-Sketch](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)
 
 **calculator**: code for [Project: Calculator](https://www.theodinproject.com/lessons/foundations-calculator)
+
+**sign-up-form**: code for [Project: Sign-up Form](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form)
