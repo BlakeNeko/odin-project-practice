@@ -11,6 +11,7 @@
 }
 
 :root {
+  --background-color: #f7fbf2;
   --button-color: #38693c;
   --input-border-color: #e5e7eb;
   --input-border-color-focus: #39656c;
@@ -70,4 +71,5 @@
 
 .right {
   flex: 2;
+  background-color: var(--background-color);
 }
