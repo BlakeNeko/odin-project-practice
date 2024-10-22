@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Etch-a-Sketch</h1>
+    <div class="main">
+      <div class="controls">
+        <h2>Size</h2>
+        <input id="size" type="range" min="1" max="100" value="16" />
+        <p id="size-value">16 x 16</p>
+        <h2>Color</h2>
+        <button id="black">Black</button>
+        <button id="random">Random</button>
+        <button id="progressive-darkening">Progressive darkening</button>
+        <button id="clear">Clear</button>
+      </div>
+      <div class="canvas"></div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>

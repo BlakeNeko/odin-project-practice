@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@font-face {
+  font-family: 'norse';
+  src: url('./Norse-Bold.otf');
+}
+
+:root {
+  --background-color: #f7fbf2;
+  --container-background-color: #ebefe6;
+  --button-color: #38693c;
+  --input-border-color: #e5e7eb;
+  --input-border-color-focus: #39656c;
+  --input-border-color-error: #ba1a1a;
+}
+
+.container {
+  display: flex;
+}
+
+/* left */
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  background-image: url(./background.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+.left .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.left .title img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.left .title h1 {
+  color: white;
+  font-size: 60px;
+  font-family: 'norse';
+}
+
+.left .img-author {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.left .img-author a {
+  color: white;
+}
+
+/* right */
+
+.right {
+  flex: 2;
+  background-color: var(--background-color);
+}
+
+.right .slogan {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 50px;
+}
+
+.slogan p {
+  margin-top: 20px;
+}
+
+form {
+  background-color: var(--container-background-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px 50px;
+}
+
+form h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-right: 30px;
+}
+
+.form-item label {
+  letter-spacing: 2px;
+}
+
+.form-item input {
+  padding: 5px 10px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+  font-size: 20px;
+  line-height: 20px;
+  background-color: var(--background-color);
+}
+
+.form-item input:focus {
+  border-color: var(--input-border-color-focus);
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+button {
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 16px 50px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.right p.login {
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.right p.login a {
+  color: var(--button-color);
+  font-weight: bold;
+  text-decoration: none;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="title">
+          <img src="./odin-lined.png" alt="Odin logo" />
+          <h1>Odin</h1>
+        </div>
+        <div class="img-author">
+          <p>
+            Photo by
+            <a href="https://unsplash.com/@omidarmin">Kelly Sikkema</a>
+            on
+            <a href="https://unsplash.com/">Unsplash</a>
+          </p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="slogan">
+          This is not a real online service!
+          <br />
+          You know this is a clone from odin project and even the original is
+          not a real service.
+          <br />
+          Still, you can try to sign up below.
+          <br />
+          Sign up <em>now</em> to get started.
+          <p>You <em>know</em> you want to.</p>
+        </div>
+        <form action="#">
+          <h2>Let's do this!</h2>
+          <div class="form-group">
+            <div class="form-item">
+              <label for="first-name">FIRST NAME</label>
+              <input type="text" name="first-name" id="first-name" required />
+            </div>
+            <div class="form-item">
+              <label for="last-name">LAST NAME</label>
+              <input type="text" name="last-name" id="last-name" required />
+            </div>
+            <div class="form-item">
+              <label for="email">EMAIL</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div class="form-item">
+              <label for="phone-number">PHONE NUMBER</label>
+              <input
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                required
+              />
+            </div>
+            <div class="form-item">
+              <label for="password">PASSWORD</label>
+              <input type="password" name="password" id="password" required />
+            </div>
+            <div class="form-item">
+              <label for="confirm-password">CONFIRM PASSWORD</label>
+              <input
+                type="password"
+                name="confirm-password"
+                id="confirm-password"
+                required
+              />
+            </div>
+          </div>
+        </form>
+        <button>Create Account</button>
+        <p class="login">Already have an account? <a href="#">Log in</a></p>
+      </div>
+    </div>
+  </body>
+</html>

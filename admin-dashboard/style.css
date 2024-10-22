@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans', system-ui;
+}
+
+:root {
+  --surface-color: #f6fafe;
+  --surface-container-color: #eaeef2;
+  --primary-color: #186584;
+  --on-primary-color: #ffffff;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.3em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.8em 1em;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  background-color: var(--primary-color);
+  color: var(--on-primary-color);
+  border-radius: 99em;
+  transition: all 0.3s ease;
+}
+
+a img {
+  margin-right: 1em;
+}
+
+img.icon {
+  width: 30px;
+  height: 30px;
+  .trending .person .info {
+    display: flex;
+  }
+}
+
+img.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.dashboard {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas:
+    'left right'
+    'left right';
+  background-color: var(--surface-color);
+}
+
+.left {
+  grid-area: left;
+  background-color: var(--surface-container-color);
+}
+
+.navigation {
+  padding-left: 1em;
+}
+
+.title {
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+
+.navigation ul:nth-of-type(1) {
+  margin-bottom: 3em;
+}
+
+.right {
+  grid-area: right;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 6fr;
+  grid-template-areas:
+    'top top'
+    'main side';
+}
+
+.top {
+  grid-area: top;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5em;
+}
+
+.search-and-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.search input {
+  width: 500px;
+  border-radius: 99em;
+  border: 0;
+  background-color: var(--surface-container-color);
+  padding: 0.5em 1em;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.user span {
+  font-weight: bold;
+}
+
+.side {
+  grid-area: side;
+}
+.greet-and-operation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.greet {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.greet img {
+  width: 70px;
+  height: 70px;
+}
+
+.words {
+  font-weight: bold;
+}
+
+.words :nth-child(1) {
+  font-size: 0.5em;
+}
+
+.words :nth-child(2) {
+  font-size: 1.5em;
+}
+
+.operation {
+  display: flex;
+  gap: 1em;
+}
+
+.operation button {
+  border-radius: 99em;
+  border: 0;
+  padding: 1em 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: var(--primary-color);
+  color: var(--on-primary-color);
+}
+
+.operation button:hover {
+  transition: all 0.3s ease;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas:
+    'header'
+    'cards';
+  gap: 1em;
+  margin: 1em;
+}
+
+.main h2 {
+  grid-area: header;
+}
+
+.main .cards {
+  grid-area: cards;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0.5em;
+  padding: 1.25em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.project.card {
+  border-left: 10px solid var(--primary-color);
+}
+
+.card h3 {
+  margin-bottom: 0.5em;
+}
+
+.card p {
+  font-weight: 300;
+}
+
+.card .icon-buttons {
+  display: flex;
+  gap: 1.5em;
+  justify-content: end;
+}
+
+.card .icon-buttons img {
+  cursor: pointer;
+}
+
+.side {
+  grid-area: side;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.announcements {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.announcements .card div {
+  border-bottom: 1px solid lightgray;
+  margin: 0.5em 0;
+}
+
+.announcements .card p {
+  margin-bottom: 0.5em;
+}
+
+.announcements .card div:nth-of-type(3) {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.announcements h4 {
+  margin-bottom: 0.5em;
+}
+
+.trending {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.trending .person {
+  display: flex;
+  margin-bottom: 0.5em;
+  gap: 1em;
+}
