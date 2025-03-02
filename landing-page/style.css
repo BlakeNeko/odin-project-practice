@@ -138,3 +138,30 @@ main h2 {
   font-size: 30px;
   text-align: right;
 }
+
+.call-to-action {
+  padding: 8rem 10rem;
+}
+
+.call-to-action .box {
+  display: flex;
+  margin: 0 10rem;
+  padding: 3rem 10rem;
+  border-radius: 16px;
+  background-color: #3882f6;
+  color: #f9faf8;
+  justify-content: space-between;
+}
+
+.call-to-action p:first-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.call-to-action p:nth-child(2) {
+  color: #e5e7eb;
+}
+
+.call-to-action button {
+  border: 1px solid #f9faf8;
+}
