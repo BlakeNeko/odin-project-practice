@@ -46,18 +46,18 @@ header .right {
   flex: 1;
 }
 
-.left h1 {
+header .left h1 {
   font-size: 48px;
   color: #f9faf8;
   font-weight: 900;
 }
 
-.left p {
+header .left p {
   font-size: 18px;
   color: #e5e7eb;
 }
 
-.right {
+header .right {
   background-color: #6d747d;
   display: flex;
   justify-content: center;
@@ -65,7 +65,7 @@ header .right {
   height: 200px;
 }
 
-.right p {
+header .right p {
   color: #e5e7eb;
 }
 
