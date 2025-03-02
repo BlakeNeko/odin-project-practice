@@ -114,3 +114,27 @@ main h2 {
   margin-top: 1rem;
   text-align: center;
 }
+
+.quote {
+  background-color: #e5e7eb;
+  color: #1f2937;
+  font-size: 36px;
+  padding: 8rem 10rem;
+}
+
+.quote .content,
+.quote .author {
+  padding: 0 10rem;
+}
+
+.quote .content {
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+}
+
+.quote .author {
+  font-weight: 600;
+  font-size: 30px;
+  text-align: right;
+}
