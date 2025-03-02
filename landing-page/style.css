@@ -3,3 +3,32 @@
   margin: 0;
   padding: 0;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 2rem 20rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: inherit;
+}
