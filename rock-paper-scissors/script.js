@@ -9,12 +9,22 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  let humanInput = prompt('Please input your choice:');
-  humanInput = humanInput.trim().toLowerCase();
-  if (allChoices.includes(humanInput)) {
-    return humanInput;
-  } else {
-    return null;
+  // 使用死循环确保获得理想的输入
+  while (true) {
+    let humanInput = prompt('Please input your choice:');
+    // 假如用户单击了取消按钮
+    if (humanInput === null) {
+      alert(`Please select an input from "rock, paper, scissors".`);
+      continue;
+    }
+
+    humanInput = humanInput.trim().toLowerCase();
+    if (allChoices.includes(humanInput)) {
+      return humanInput;
+    } else {
+      alert(`Please select an input from "rock, paper, scissors".`);
+      continue;
+    }
   }
 }
 
