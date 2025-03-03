@@ -1,8 +1,6 @@
 const allChoices = ['rock', 'paper', 'scissors'];
 let computerScore = 0;
 let humanScore = 0;
-let computerChoice = getComputerChoice();
-let humanChoice = getHumanChoice();
 
 function getComputerChoice() {
   return allChoices[getRandomInt(0, 2)];
@@ -67,4 +65,22 @@ function playRound(computerChoice, humanChoice) {
   }
 }
 
-playRound(computerChoice, humanChoice);
+function playGame() {
+  for (let roundCount = 1; roundCount <= 5; roundCount++) {
+    console.log(`Round: ${roundCount}`);
+    let computerChoice = getComputerChoice();
+    let humanChoice = getHumanChoice();
+    playRound(computerChoice, humanChoice);
+    console.log(`Computer: ${computerScore}, Human: ${humanScore}`);
+  }
+
+  if (computerScore > humanScore) {
+    console.log('Computer wins!');
+  } else if (humanScore > computerScore) {
+    console.log('Human wins!');
+  } else {
+    console.log("It's a draw!");
+  }
+}
+
+playGame();
