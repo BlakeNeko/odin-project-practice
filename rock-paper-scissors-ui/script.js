@@ -1,7 +1,6 @@
 const allChoices = ['rock', 'paper', 'scissors'];
 let computerScore = 0;
 let humanScore = 0;
-let roundCount = 1;
 
 // 获取需要操作的DOM元素
 const humanChoiceBox = document.querySelector('.duel .human .choice');
@@ -14,7 +13,6 @@ const roundWinnerInfo = document.querySelector('.info h2');
 function resetGameData() {
   computerScore = 0;
   humanScore = 0;
-  roundCount = 1;
 }
 
 function resetGameUI() {
@@ -76,5 +74,14 @@ buttons.forEach((button) => {
     let computerChoice = getComputerChoice();
     let humanChoice = event.target.dataset.choice;
     playRound(computerChoice, humanChoice);
+    if (humanScore === 5) {
+      alert('Human wins the game!');
+      resetGameData();
+      resetGameUI();
+    } else if (computerScore === 5) {
+      alert('Computer wins the game!');
+      resetGameData();
+      resetGameUI();
+    }
   });
 });
