@@ -32,6 +32,15 @@ function resetGameUI() {
 resetGameData();
 resetGameUI();
 
+function getComputerChoice() {
+  return allChoices[getRandomInt(0, 2)];
+}
+
+function getRandomInt(min, max) {
+  // 返回一个随机整数，最小值为min，最大值为max
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 buttons.forEach((button) => {
   button.addEventListener('click', function (event) {
     console.log(event.target.dataset.choice);
