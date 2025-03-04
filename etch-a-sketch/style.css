@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main h1 {
+  margin: 10px 0;
+}
+
+.buttons {
+  margin: 10px 0;
+}
+
+.buttons button {
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  padding: 4px;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.canvas {
+  width: 700px;
+  height: 700px;
+  border: 2px solid #000000;
+  margin: 10px 0;
+}
