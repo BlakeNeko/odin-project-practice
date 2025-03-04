@@ -67,6 +67,7 @@ function playRound(computerChoice, humanChoice) {
       console.log(`It's a draw! ${computerChoice} and ${humanChoice}.`);
     }
   }
+  console.log(`${humanScore} : ${computerScore}`);
 }
 
 buttons.forEach((button) => {
