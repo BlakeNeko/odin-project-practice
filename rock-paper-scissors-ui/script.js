@@ -78,6 +78,9 @@ buttons.forEach((button) => {
     updateChoiceBoxUI(computerChoice, humanChoice);
 
     playRound(computerChoice, humanChoice);
+
+    updateScoreUI();
+
     if (humanScore === 5) {
       alert('Human wins the game!');
       resetGameData();
@@ -114,4 +117,9 @@ function updateChoiceBoxUI(computerChoice, humanChoice) {
       humanChoiceBox.textContent = '✌️';
       break;
   }
+}
+
+function updateScoreUI() {
+  computerScoreInfo.textContent = computerScore;
+  humanScoreInfo.textContent = humanScore;
 }
