@@ -74,6 +74,9 @@ buttons.forEach((button) => {
   button.addEventListener('click', function (event) {
     let computerChoice = getComputerChoice();
     let humanChoice = event.target.dataset.choice;
+
+    updateChoiceBoxUI(computerChoice, humanChoice);
+
     playRound(computerChoice, humanChoice);
     if (humanScore === 5) {
       alert('Human wins the game!');
@@ -86,3 +89,29 @@ buttons.forEach((button) => {
     }
   });
 });
+
+function updateChoiceBoxUI(computerChoice, humanChoice) {
+  switch (computerChoice) {
+    case 'rock':
+      computerChoiceBox.textContent = '✊';
+      break;
+    case 'paper':
+      computerChoiceBox.textContent = '✋';
+      break;
+    case 'scissors':
+      computerChoiceBox.textContent = '✌️';
+      break;
+  }
+
+  switch (humanChoice) {
+    case 'rock':
+      humanChoiceBox.textContent = '✊';
+      break;
+    case 'paper':
+      humanChoiceBox.textContent = '✋';
+      break;
+    case 'scissors':
+      humanChoiceBox.textContent = '✌️';
+      break;
+  }
+}
