@@ -39,35 +39,43 @@ function playRound(computerChoice, humanChoice) {
   if (computerChoice === 'rock') {
     if (humanChoice === 'rock') {
       console.log(`It's a draw! ${computerChoice} and ${humanChoice}.`);
+      return 'Draw';
     } else if (humanChoice === 'paper') {
       console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
       humanScore++;
+      return 'Human wins a round';
     } else {
       console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
       computerScore++;
+      return 'Computer wins a round';
     }
   } else if (computerChoice === 'paper') {
     if (humanChoice === 'rock') {
       console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
       computerScore++;
+      return 'Computer wins a round';
     } else if (humanChoice === 'paper') {
       console.log(`It's a draw! ${computerChoice} and ${humanChoice}.`);
+      return 'Draw';
     } else {
       console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
       humanScore++;
+      return 'Human wins a round';
     }
   } else {
     if (humanChoice === 'rock') {
       console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
       humanScore++;
+      return 'Human wins a round';
     } else if (humanChoice === 'paper') {
       console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
       computerScore++;
+      return 'Computer wins a round';
     } else {
       console.log(`It's a draw! ${computerChoice} and ${humanChoice}.`);
+      return 'Draw';
     }
   }
-  console.log(`${humanScore} : ${computerScore}`);
 }
 
 buttons.forEach((button) => {
@@ -76,10 +84,9 @@ buttons.forEach((button) => {
     let humanChoice = event.target.dataset.choice;
 
     updateChoiceBoxUI(computerChoice, humanChoice);
-
-    playRound(computerChoice, humanChoice);
-
+    let result = playRound(computerChoice, humanChoice);
     updateScoreUI();
+    updateInfoUI(result);
 
     if (humanScore === 5) {
       alert('Human wins the game!');
@@ -122,4 +129,8 @@ function updateChoiceBoxUI(computerChoice, humanChoice) {
 function updateScoreUI() {
   computerScoreInfo.textContent = computerScore;
   humanScoreInfo.textContent = humanScore;
+}
+
+function updateInfoUI(result) {
+  roundWinnerInfo.textContent = result;
 }
