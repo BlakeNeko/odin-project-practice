@@ -1,7 +1,8 @@
-// 当前画布尺寸
-let canvasSize = 16;
-
 const canvas = document.querySelector('.canvas');
+const changeGridSizeButton = document.querySelector('button#change-grid-size');
+const clearButton = document.querySelector('button#clear');
+
+let canvasSize = 16; // 当前画布尺寸
 
 function createCanvas(canvasSize) {
   for (let rowCount = 1; rowCount <= canvasSize; rowCount++) {
@@ -24,9 +25,6 @@ function clearCanvas() {
   canvas.innerHTML = '';
 }
 
-createCanvas(canvasSize);
-
-const changeGridSizeButton = document.querySelector('button#change-grid-size');
 changeGridSizeButton.addEventListener('click', function () {
   let userInput = prompt('Size of the new canvas(less than or equal to 100):');
   // 用户单击取消
@@ -49,8 +47,9 @@ changeGridSizeButton.addEventListener('click', function () {
   }
 });
 
-const clearButton = document.querySelector('button#clear');
 clearButton.addEventListener('click', function () {
   clearCanvas();
   createCanvas(canvasSize);
 });
+
+createCanvas(canvasSize);
