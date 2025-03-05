@@ -5,6 +5,7 @@ const blackButton = document.querySelector('button#black');
 const randomRGBButton = document.querySelector('button#random-rgb');
 
 let canvasSize = 16; // 当前画布尺寸
+let drawMode = drawBlack; // 当前绘画颜色
 
 function createCanvas(canvasSize) {
   for (let rowCount = 1; rowCount <= canvasSize; rowCount++) {
@@ -15,7 +16,7 @@ function createCanvas(canvasSize) {
       grid.className = 'grid';
       row.appendChild(grid);
 
-      grid.addEventListener('mouseenter', drawBlack);
+      grid.addEventListener('mouseenter', drawMode);
     }
     canvas.appendChild(row);
   }
@@ -72,6 +73,7 @@ blackButton.addEventListener('click', function () {
   allGrids.forEach((eachGrid) => {
     eachGrid.removeEventListener('mouseenter', drawRandomRGB);
     eachGrid.addEventListener('mouseenter', drawBlack);
+    drawMode = drawBlack;
   });
 });
 
@@ -80,6 +82,7 @@ randomRGBButton.addEventListener('click', function () {
   allGrids.forEach((eachGrid) => {
     eachGrid.removeEventListener('mouseenter', drawBlack);
     eachGrid.addEventListener('mouseenter', drawRandomRGB);
+    drawMode = drawRandomRGB;
   });
 });
 
