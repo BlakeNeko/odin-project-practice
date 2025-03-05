@@ -1,6 +1,8 @@
 const canvas = document.querySelector('.canvas');
 const changeGridSizeButton = document.querySelector('button#change-grid-size');
 const clearButton = document.querySelector('button#clear');
+const blackButton = document.querySelector('button#black');
+const randomRGBButton = document.querySelector('button#random-rgb');
 
 let canvasSize = 16; // 当前画布尺寸
 
@@ -13,9 +15,7 @@ function createCanvas(canvasSize) {
       grid.className = 'grid';
       row.appendChild(grid);
 
-      grid.addEventListener('mouseenter', function () {
-        this.style.backgroundColor = '#000000';
-      });
+      grid.addEventListener('mouseenter', drawBlack);
     }
     canvas.appendChild(row);
   }
@@ -23,6 +23,21 @@ function createCanvas(canvasSize) {
 
 function clearCanvas() {
   canvas.innerHTML = '';
+}
+
+function drawBlack(event) {
+  event.target.style.backgroundColor = '#000000';
+}
+
+function generateRandomRGB() {
+  let red = Math.random() * 256;
+  let green = Math.random() * 256;
+  let blue = Math.random() * 256;
+  return `rgb(${red}, ${green}, ${blue})`;
+}
+
+function drawRandomRGB(event) {
+  event.target.style.backgroundColor = generateRandomRGB();
 }
 
 changeGridSizeButton.addEventListener('click', function () {
@@ -50,6 +65,22 @@ changeGridSizeButton.addEventListener('click', function () {
 clearButton.addEventListener('click', function () {
   clearCanvas();
   createCanvas(canvasSize);
+});
+
+blackButton.addEventListener('click', function () {
+  const allGrids = document.querySelectorAll('div.grid');
+  allGrids.forEach((eachGrid) => {
+    eachGrid.removeEventListener('mouseenter', drawRandomRGB);
+    eachGrid.addEventListener('mouseenter', drawBlack);
+  });
+});
+
+randomRGBButton.addEventListener('click', function () {
+  const allGrids = document.querySelectorAll('div.grid');
+  allGrids.forEach((eachGrid) => {
+    eachGrid.removeEventListener('mouseenter', drawBlack);
+    eachGrid.addEventListener('mouseenter', drawRandomRGB);
+  });
 });
 
 createCanvas(canvasSize);
