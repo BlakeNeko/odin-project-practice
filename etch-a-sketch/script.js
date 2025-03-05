@@ -8,6 +8,10 @@ for (let rowCount = 1; rowCount <= canvasSize; rowCount++) {
     let grid = document.createElement('div');
     grid.className = 'grid';
     row.appendChild(grid);
+
+    grid.addEventListener('mouseenter', function () {
+      this.style.backgroundColor = '#000000';
+    });
   }
   canvas.appendChild(row);
 }
