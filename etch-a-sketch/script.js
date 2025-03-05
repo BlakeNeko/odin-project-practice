@@ -1,3 +1,6 @@
+// 当前画布尺寸
+let canvasSize = 16;
+
 const canvas = document.querySelector('.canvas');
 
 function createCanvas(canvasSize) {
@@ -17,4 +20,31 @@ function createCanvas(canvasSize) {
   }
 }
 
-createCanvas(8);
+function clearCanvas() {
+  canvas.innerHTML = '';
+}
+
+createCanvas(canvasSize);
+
+const changeGridSizeButton = document.querySelector('button#change-grid-size');
+changeGridSizeButton.addEventListener('click', function () {
+  let userInput = prompt('Size of the new canvas(less than or equal to 100):');
+  // 用户单击取消
+  if (userInput === null) {
+    alert('You have cancelled your input.');
+    return;
+  }
+  // 用户输入的不能转换为数字
+  userInput = parseInt(userInput.trim());
+  if (isNaN(userInput)) {
+    alert('Please input a vaild number.');
+    return;
+  } else if (userInput > 100) {
+    alert('Please input less than 100.');
+    return;
+  } else {
+    canvasSize = userInput;
+    clearCanvas();
+    createCanvas(canvasSize);
+  }
+});
