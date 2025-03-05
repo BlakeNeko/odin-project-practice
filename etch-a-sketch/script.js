@@ -48,3 +48,9 @@ changeGridSizeButton.addEventListener('click', function () {
     createCanvas(canvasSize);
   }
 });
+
+const clearButton = document.querySelector('button#clear');
+clearButton.addEventListener('click', function () {
+  clearCanvas();
+  createCanvas(canvasSize);
+});
