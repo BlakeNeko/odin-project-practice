@@ -28,6 +28,7 @@ function clearCanvas() {
 
 function drawBlack(event) {
   event.target.style.backgroundColor = '#000000';
+  event.target.style.opacity = Number(event.target.style.opacity) + 0.1;
 }
 
 function generateRandomRGB() {
