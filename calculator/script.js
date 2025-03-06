@@ -15,6 +15,9 @@ let secondNumber = '';
 function clearScreen() {
   currentOperationScreen.textContent = '';
   lastOperationScreen.textContent = '';
+  firstNumber = '';
+  currentOperator = '';
+  secondNumber = '';
 }
 
 function deleteNumber() {
@@ -70,13 +73,8 @@ function initCalculator() {
   });
 
   operatorButtons.forEach((eachButton) => {
-    eachButton.addEventListener('click', function () {
-      console.log(this.textContent);
-    });
+    eachButton.addEventListener('click', function () {});
   });
-
-  lastOperationScreen.textContent = '21+21=';
-  currentOperationScreen.textContent = '42';
 }
 
 initCalculator();
