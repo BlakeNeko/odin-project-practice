@@ -25,10 +25,21 @@ function deleteNumber() {
 }
 
 function appendNumber(number) {
+  // 避免出现多个0，如果当前屏幕已经是0了，就替换为新输入的数字
+  if (currentOperationScreen.textContent === '0') {
+    if (number === '0') {
+      return;
+    } else {
+      currentOperationScreen.textContent = number;
+      return;
+    }
+  }
+
   currentOperationScreen.textContent += number.toString();
 }
 
 function appendPoint() {
+  // 避免出现多个小数点，如果当前屏幕已经有小数点或者为空，就不允许输入小数点
   if (
     currentOperationScreen.textContent.includes('.') ||
     currentOperationScreen.textContent === ''
