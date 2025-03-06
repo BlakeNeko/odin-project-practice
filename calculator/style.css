@@ -81,3 +81,11 @@ button[data-role='delete'] {
   background-color: #5b4e59;
   color: #fef2f2;
 }
+
+button:hover {
+  filter: brightness(90%);
+}
+
+button:active {
+  filter: brightness(70%);
+}
