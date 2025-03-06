@@ -28,6 +28,17 @@ function appendNumber(number) {
   currentOperationScreen.textContent += number.toString();
 }
 
+function appendPoint() {
+  if (
+    currentOperationScreen.textContent.includes('.') ||
+    currentOperationScreen.textContent === ''
+  ) {
+    return;
+  }
+
+  currentOperationScreen.textContent += '.';
+}
+
 function initCalculator() {
   clearButton.addEventListener('click', function () {
     clearScreen();
@@ -44,7 +55,7 @@ function initCalculator() {
   });
 
   pointButton.addEventListener('click', function () {
-    console.log(this.textContent);
+    appendPoint();
   });
 
   operatorButtons.forEach((eachButton) => {
