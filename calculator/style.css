@@ -3,3 +3,80 @@
   margin: 0;
   padding: 0;
 }
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 650px;
+  border: 2px solid #5b4e59;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #5b4e59;
+  font-size: 50px;
+  text-align: right;
+}
+
+.screen .last-operation {
+  flex: 1;
+  padding: 20px;
+}
+
+.screen .current-operation {
+  flex: 1;
+  padding: 20px;
+}
+
+.buttons {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: #fef2f2;
+}
+
+.buttons .row {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  flex: 1;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 26px;
+  background-color: #fddede;
+}
+
+button[data-role='+'],
+button[data-role='-'],
+button[data-role='*'],
+button[data-role='/'] {
+  background-color: #ffcdca;
+}
+
+button[data-role='='] {
+  background-color: #eb7a91;
+  color: #fef2f2;
+}
+
+button[data-role='clear'],
+button[data-role='delete'] {
+  background-color: #5b4e59;
+  color: #fef2f2;
+}
