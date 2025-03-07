@@ -8,3 +8,9 @@
 | Rock Paper Scissors UI | [Code](https://github.com/BlakeNeko/odin-project-practice/tree/main/rock-paper-scissors-ui) |
 | Etch-a-Sketch          | [Code](https://github.com/BlakeNeko/odin-project-practice/tree/main/etch-a-sketch)          |
 | Calculator             | [Code](https://github.com/BlakeNeko/odin-project-practice/tree/main/calculator)             |
+
+# 🚀 Full Stack JavaScript
+
+| Project      | Repository                                                                        |
+| ------------ | --------------------------------------------------------------------------------- |
+| Sign-up Form | [Code](https://github.com/BlakeNeko/odin-project-practice/tree/main/sign-up-form) |
