@@ -40,3 +40,18 @@ main {
   grid-area: main;
   background-color: var(--color-background-gray);
 }
+
+/* 左侧导航栏 */
+
+nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.logo .material-symbols-outlined {
+  font-size: 50px;
+}
