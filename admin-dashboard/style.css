@@ -210,3 +210,23 @@ main .projects .card .actions {
   justify-content: end;
   margin-top: 30px;
 }
+
+aside {
+  display: flex;
+  flex-direction: column;
+}
+
+aside .announcements {
+  font-size: 0.8rem;
+}
+
+aside .announcements li {
+  margin: 10px 0;
+}
+
+aside .card {
+  background-color: var(--color-background-white);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
