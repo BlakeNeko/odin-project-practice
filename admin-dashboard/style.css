@@ -78,3 +78,52 @@ nav ul li {
   font-weight: 700;
   cursor: pointer;
 }
+
+/* 顶部 */
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px;
+}
+
+header .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+header .top div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+header .top input {
+  border: none;
+  background-color: var(--color-background-gray);
+  border-radius: 16px;
+  height: 30px;
+  width: 500px;
+  padding: 0 10px;
+  outline: none;
+}
+
+header .top img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+header .top span:nth-of-type(2) {
+  font-weight: 700;
+}
+
+header .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
