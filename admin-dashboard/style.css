@@ -84,7 +84,7 @@ nav ul li {
 header {
   display: flex;
   flex-direction: column;
-  padding: 0 100px;
+  padding: 20px 100px;
 }
 
 header .top {
@@ -92,6 +92,7 @@ header .top {
   justify-content: space-between;
   align-items: center;
   flex: 1;
+  margin-bottom: 20px;
 }
 
 header .top div {
@@ -123,7 +124,38 @@ header .top span:nth-of-type(2) {
 
 header .bottom {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex: 1;
+}
+
+header .bottom .left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 700;
+}
+
+header .bottom .left p:nth-of-type(2) {
+  font-size: 1.5rem;
+}
+
+header .bottom img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+header .bottom .right {
+  display: flex;
+  gap: 20px;
+}
+
+header .bottom .right button {
+  border-radius: 16px;
+  padding: 8px 24px;
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  font-weight: 700;
 }
