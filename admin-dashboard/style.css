@@ -202,6 +202,7 @@ main .projects .card .title {
 
 main .projects .card p:nth-of-type(2) {
   flex: 1;
+  color: var(--color-text-gray);
 }
 
 main .projects .card .actions {
@@ -225,6 +226,10 @@ aside .announcements li {
   margin: 10px 0;
 }
 
+aside .announcements p {
+  color: var(--color-text-gray);
+}
+
 aside .card {
   background-color: var(--color-background-white);
   border-radius: 8px;
@@ -243,4 +248,8 @@ aside .trending .user img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+
+aside .trending .user p:nth-of-type(2) {
+  color: var(--color-text-gray);
 }
