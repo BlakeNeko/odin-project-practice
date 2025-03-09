@@ -11,6 +11,7 @@
 
 # 🚀 Full Stack JavaScript
 
-| Project      | Repository                                                                        |
-| ------------ | --------------------------------------------------------------------------------- |
-| Sign-up Form | [Code](https://github.com/BlakeNeko/odin-project-practice/tree/main/sign-up-form) |
+| Project         | Repository                                                                           |
+| --------------- | ------------------------------------------------------------------------------------ |
+| Sign-up Form    | [Code](https://github.com/BlakeNeko/odin-project-practice/tree/main/sign-up-form)    |
+| Admin Dashboard | [Code](https://github.com/BlakeNeko/odin-project-practice/tree/main/admin-dashboard) |
