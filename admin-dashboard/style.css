@@ -159,3 +159,54 @@ header .bottom .right button {
   color: var(--color-text-white);
   font-weight: 700;
 }
+
+/* 主要区域 */
+
+main {
+  padding: 20px 100px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+
+main h2 {
+  margin-bottom: 10px;
+}
+
+main ul {
+  list-style-type: none;
+}
+
+main .projects ul {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  gap: 20px;
+}
+
+main .projects .card {
+  background-color: var(--color-background-white);
+  border-left: 8px solid var(--color-secondary);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main .projects .card .title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+main .projects .card p:nth-of-type(2) {
+  flex: 1;
+}
+
+main .projects .card .actions {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  margin-top: 30px;
+}
