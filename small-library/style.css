@@ -11,6 +11,9 @@
   --color-text-black: #1e1b13;
   --color-primary: #f8e287;
   --color-on-primary: #534600;
+  --color-book-card-background: #f4eddf;
+  --color-read: #43664e;
+  --color-unread: #ba1a1a;
 }
 
 .container {
@@ -74,4 +77,26 @@ aside button {
 main {
   flex: 5;
   background-color: var(--color-main-background);
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-content: start;
+}
+
+.book-card {
+  background-color: var(--color-book-card-background);
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.strip-read {
+  border-top: 8px solid var(--color-read);
+}
+
+.strip-unread {
+  border-top: 8px solid var(--color-unread);
 }
