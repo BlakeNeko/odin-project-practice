@@ -2,11 +2,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: var(--color-text-black);
 }
 
 :root {
   --color-aside-background: #f4eddf;
   --color-main-background: #fff9ee;
+  --color-text-black: #1e1b13;
+  --color-primary: #f8e287;
+  --color-on-primary: #534600;
 }
 
 .container {
@@ -15,10 +19,57 @@
   width: 100vw;
 }
 
+/* 侧边栏 */
+
 aside {
   flex: 1;
   background-color: var(--color-aside-background);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
+
+aside h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+
+aside form div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+aside label {
+  margin-bottom: 10px;
+}
+
+aside input[type='text'] {
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  background-color: var(--color-main-background);
+  font-size: 1.2rem;
+  padding: 0 10px;
+}
+
+aside input[type='checkbox'] {
+  height: 30px;
+}
+
+aside button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 16px;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: 1.2rem;
+}
+
+/* 主要区域 */
 
 main {
   flex: 5;
