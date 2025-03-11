@@ -91,6 +91,9 @@ main {
   border-radius: 8px;
   overflow: hidden;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .strip-read {
@@ -99,4 +102,26 @@ main {
 
 .strip-unread {
   border-top: 8px solid var(--color-unread);
+}
+
+.book-card .info h1,
+.book-card .info p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-card .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-self: end;
+}
+
+.book-card .buttons button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 16px;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
 }
