@@ -75,6 +75,8 @@ function renderSingleBookCard(book) {
 
   deleteButton.textContent = 'Delete';
 
+  bookCard.setAttribute('data-id', book.id);
+
   return bookCard;
 }
 
