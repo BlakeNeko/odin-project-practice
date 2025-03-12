@@ -22,7 +22,9 @@ function changeBookIsRead(id) {
 }
 
 function renderBookCards() {
-  const main = document.querySelector('main');
+  let main = document.querySelector('main');
+
+  main.innerHTML = '';
 
   myLibrary.forEach((each) => {
     let bookCard = renderSingleBookCard(each);
@@ -70,7 +72,24 @@ function renderSingleBookCard(book) {
 
   bookCard.setAttribute('data-id', book.id);
 
+  markButton.addEventListener('click', handleMarkButtonClick);
+  deleteButton.addEventListener('click', handleDeleteButtonClick);
+
   return bookCard;
+}
+
+function handleMarkButtonClick() {
+  let bookCard = this.parentElement.parentElement;
+  let id = bookCard.getAttribute('data-id');
+  changeBookIsRead(id);
+  renderBookCards();
+}
+
+function handleDeleteButtonClick() {
+  let bookCard = this.parentElement.parentElement;
+  let id = bookCard.getAttribute('data-id');
+  removeBook(id);
+  renderBookCards();
 }
 
 function listBook() {
