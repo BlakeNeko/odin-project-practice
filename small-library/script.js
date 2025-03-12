@@ -8,10 +8,6 @@ function Book(name, author, pages, isRead) {
   this.isRead = isRead;
 }
 
-let book1 = new Book('One', 'Tom', '30', false);
-let book2 = new Book('Two', 'Mike', '50', true);
-let book3 = new Book('Three', 'John', '60', false);
-
 function addBook(book) {
   myLibrary.push(book);
 }
@@ -28,13 +24,10 @@ function changeBookIsRead(id) {
 function renderBookCards() {
   const main = document.querySelector('main');
 
-  const card1 = renderSingleBookCard(book1);
-  const card2 = renderSingleBookCard(book2);
-  const card3 = renderSingleBookCard(book3);
-
-  main.appendChild(card1);
-  main.appendChild(card2);
-  main.appendChild(card3);
+  myLibrary.forEach((each) => {
+    let bookCard = renderSingleBookCard(each);
+    main.appendChild(bookCard);
+  });
 }
 
 function renderSingleBookCard(book) {
@@ -85,5 +78,11 @@ function listBook() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  let book1 = new Book('One', 'Tom', '30', false);
+  let book2 = new Book('Two', 'Mike', '50', true);
+  let book3 = new Book('Three', 'John', '60', false);
+  addBook(book1);
+  addBook(book2);
+  addBook(book3);
   renderBookCards();
 });
