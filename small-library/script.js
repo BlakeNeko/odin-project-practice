@@ -92,16 +92,47 @@ function handleDeleteButtonClick() {
   renderBookCards();
 }
 
+function handleAddButtonClick(event) {
+  event.preventDefault();
+
+  let nameInput = document.querySelector('input#book-name');
+  let authorInput = document.querySelector('input#author');
+  let pagesInput = document.querySelector('input#pages');
+  let readInput = document.querySelector('input#read');
+
+  let name = nameInput.value.trim();
+  let author = authorInput.value.trim();
+  let pages = pagesInput.value.trim();
+  let read = readInput.checked;
+
+  if (name === '' || author === '' || pages === '') {
+    alert('Please enter complete infomation.');
+  }
+
+  let newBook = new Book(name, author, pages, read);
+  addBook(newBook);
+  renderBookCards();
+
+  nameInput.value = '';
+  authorInput.value = '';
+  pagesInput.value = '';
+  readInput.checked = false;
+}
+
 function listBook() {
   console.log(JSON.parse(JSON.stringify(myLibrary)));
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  let addButton = document.querySelector('form button');
+  addButton.addEventListener('click', handleAddButtonClick);
+
   let book1 = new Book('One', 'Tom', '30', false);
   let book2 = new Book('Two', 'Mike', '50', true);
   let book3 = new Book('Three', 'John', '60', false);
   addBook(book1);
   addBook(book2);
   addBook(book3);
+
   renderBookCards();
 });
