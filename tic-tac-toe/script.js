@@ -6,7 +6,12 @@ const gameStatus = (function () {
     board = Array(9).fill('');
   }
 
+  function randomChoosePlayer() {
+    return Math.random() < 0.5 ? 'X' : 'O';
+  }
+
   return {
     resetBoard,
+    randomChoosePlayer,
   };
 })();
