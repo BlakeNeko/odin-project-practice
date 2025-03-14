@@ -10,6 +10,14 @@ const gameStatus = (function () {
     return Math.random() < 0.5 ? 'X' : 'O';
   }
 
+  function placeChess(location) {
+    if (board[location] !== '') {
+      alert('You cannot place your chess there!');
+    }
+
+    board[location] = currentPlayer;
+  }
+
   return {
     resetBoard,
     randomChoosePlayer,
