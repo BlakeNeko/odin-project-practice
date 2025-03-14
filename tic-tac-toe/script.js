@@ -51,10 +51,15 @@ const gameStatus = (function () {
     return null;
   }
 
+  function switchPlayer() {
+    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+  }
+
   return {
     resetBoard,
     randomChoosePlayer,
     placeChess,
     checkWinner,
+    switchPlayer,
   };
 })();
