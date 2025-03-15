@@ -1,10 +1,12 @@
 const gameStatus = (function () {
   let board = [];
   let currentPlayer = 'X';
+  let isGameOver = false;
 
   function resetBoard() {
     board = Array(9).fill('');
     currentPlayer = randomChoosePlayer();
+    isGameOver = false;
   }
 
   function randomChoosePlayer() {
@@ -12,6 +14,11 @@ const gameStatus = (function () {
   }
 
   function placeChess(position) {
+    if (isGameOver) {
+      alert('游戏已结束，不能下子啦');
+      return false;
+    }
+
     if (board[position] !== '') {
       alert('不能在此处下子');
       return false;
@@ -43,11 +50,13 @@ const gameStatus = (function () {
         board[pos1] === board[pos2] &&
         board[pos2] === board[pos3]
       ) {
+        isGameOver = true;
         return board[pos1];
       }
     }
 
     if (board.every((each) => each !== '')) {
+      isGameOver = true;
       return 'tie';
     }
 
