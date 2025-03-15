@@ -4,6 +4,7 @@ const gameStatus = (function () {
 
   function resetBoard() {
     board = Array(9).fill('');
+    currentPlayer = randomChoosePlayer();
   }
 
   function randomChoosePlayer() {
@@ -12,10 +13,12 @@ const gameStatus = (function () {
 
   function placeChess(position) {
     if (board[position] !== '') {
-      alert('You cannot place your chess there!');
+      alert('不能在此处下子');
+      return false;
     }
 
     board[position] = currentPlayer;
+    return true;
   }
 
   function checkWinner() {
@@ -73,3 +76,69 @@ const gameStatus = (function () {
     getCurrentPlayer,
   };
 })();
+
+const renderer = (function () {
+  const boardElement = document.querySelector('.board');
+  const messageElement = document.querySelector('.message');
+  const restartButton = document.querySelector('button');
+  const boxes = document.querySelectorAll('.box');
+
+  function updateBoard() {
+    let board = gameStatus.getBoard();
+    boxes.forEach((box, index) => {
+      box.textContent = board[index];
+    });
+  }
+
+  function updateMessage(message) {
+    messageElement.textContent = message;
+  }
+
+  function toggleRestartButton(show) {
+    restartButton.style.display = show ? 'block' : 'none';
+  }
+
+  function handleBoxClick(event) {
+    // 处理数字 id（1-9）转换为数组索引（0-8）
+    const index = parseInt(event.target.id, 10) - 1;
+
+    if (gameStatus.placeChess(index)) {
+      updateBoard();
+
+      const winner = gameStatus.checkWinner();
+      if (winner) {
+        updateMessage(winner === 'tie' ? '游戏平局！🤝' : `${winner} 获胜！🎉`);
+        toggleRestartButton(true);
+      } else {
+        gameStatus.switchPlayer();
+        updateMessage(`${gameStatus.getCurrentPlayer()} 的回合`);
+      }
+    }
+  }
+
+  function bindEvents() {
+    boardElement.addEventListener('click', (event) => {
+      if (event.target.classList.contains('box')) {
+        handleBoxClick(event);
+      }
+    });
+
+    restartButton.addEventListener('click', () => {
+      gameStatus.resetBoard();
+      updateBoard();
+      toggleRestartButton(false);
+      updateMessage(`${gameStatus.getCurrentPlayer()} 的回合`);
+    });
+  }
+
+  return {
+    updateBoard,
+    updateMessage,
+    toggleRestartButton,
+    bindEvents,
+  };
+})();
+
+gameStatus.resetBoard();
+renderer.bindEvents();
+renderer.updateMessage(`${gameStatus.getCurrentPlayer()} 的回合`);
