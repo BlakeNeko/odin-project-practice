@@ -17,22 +17,30 @@ function renderMenuPage() {
   title.textContent = 'Our Menu';
 
   const menu = document.createElement('ul');
-  const cardContainer = document.createElement('li');
-  menu.appendChild(cardContainer);
 
-  const dishCard = document.createElement('div');
+  for (let each of dishesData) {
+    menu.appendChild(createSingleCard(each));
+  }
+
+  content.appendChild(title);
+  content.appendChild(menu);
+}
+
+function createSingleCard(dishData) {
+  let cardContainer = document.createElement('li');
+
+  let dishCard = document.createElement('div');
   dishCard.className = 'dish-card';
-  const dishCardTitle = document.createElement('h1');
-  dishCardTitle.textContent = 'Neapolitan Pizza';
-  const dishCardPrice = document.createElement('p');
-  dishCardPrice.textContent = '$ 10';
+  let dishCardTitle = document.createElement('h1');
+  dishCardTitle.textContent = dishData.name;
+  let dishCardPrice = document.createElement('p');
+  dishCardPrice.textContent = `$ ${dishData.price}`;
   dishCard.appendChild(dishCardTitle);
   dishCard.appendChild(dishCardPrice);
 
   cardContainer.appendChild(dishCard);
 
-  content.appendChild(title);
-  content.appendChild(menu);
+  return cardContainer;
 }
 
 export { renderMenuPage };
