@@ -4,6 +4,6 @@ import './style.css';
 
 const content = document.querySelector('#content');
 
-renderMenuPage();
+// renderMenuPage();
 
 export { content };
