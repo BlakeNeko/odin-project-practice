@@ -74,3 +74,38 @@ nav a:hover {
 .home img {
   border-radius: 16px;
 }
+
+/* 菜单CSS */
+.menu h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.dish-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #ff4500;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.dish-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.dish-card h1 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
