@@ -25,6 +25,8 @@ a {
 header {
   width: 100%;
   padding: 20px 100px;
+  background-color: #333333;
+  color: #ffffff;
 }
 
 nav {
@@ -47,9 +49,28 @@ nav a {
 
 nav a:hover {
   background-color: #f39c12;
-  color: #ffffff;
 }
 
 #content {
+  width: 100%;
+  padding: 50px 100px;
   flex: 1;
+}
+
+/* 主页CSS */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(#ffcc99, #ff9966);
+}
+
+.home h1,
+.home img {
+  margin: 20px 0;
+}
+
+.home img {
+  border-radius: 16px;
 }
