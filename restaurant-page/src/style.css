@@ -3,3 +3,53 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  width: 100%;
+  padding: 20px 100px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  background-color: #f39c12;
+  color: #ffffff;
+}
+
+#content {
+  flex: 1;
+}
