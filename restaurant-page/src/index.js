@@ -1,3 +1,8 @@
+import { renderHomePage } from './scripts/home.js';
 import './style.css';
 
-console.log('test webpack');
+const content = document.querySelector('#content');
+
+renderHomePage();
+
+export { content };
