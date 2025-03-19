@@ -33,11 +33,11 @@ const categoryList = document.querySelector('ul.categories');
 
 function renderAllTasks() {
   for (let each of tasks) {
-    taskList.appendChild(renderTask(each));
+    taskList.appendChild(createTaskElement(each));
   }
 }
 
-function renderTask(task) {
+function createTaskElement(task) {
   let li = document.createElement('li');
   li.setAttribute('data-id', task.id);
 
@@ -119,7 +119,7 @@ function getAllCategories() {
   return categories;
 }
 
-function renderCategory(name) {
+function createCategoryElement(name) {
   let li = document.createElement('li');
   li.setAttribute('data-category', name);
 
@@ -140,7 +140,7 @@ function renderAllCategories() {
   let categories = getAllCategories();
 
   for (let each of categories) {
-    categoryList.appendChild(renderCategory(each));
+    categoryList.appendChild(createCategoryElement(each));
   }
 }
 
