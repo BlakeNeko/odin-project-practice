@@ -29,6 +29,7 @@ let tasks = [
 ];
 
 const taskList = document.querySelector('ul.task-list');
+const categoryList = document.querySelector('ul.categories');
 
 function renderAllTasks() {
   for (let each of tasks) {
@@ -115,8 +116,33 @@ function getAllCategories() {
     categories.add(each.category);
   }
 
-  console.log(categories);
+  return categories;
+}
+
+function renderCategory(name) {
+  let li = document.createElement('li');
+  li.setAttribute('data-category', name);
+
+  let icon = document.createElement('span');
+  icon.classList.add('material-symbols-outlined');
+  icon.innerText = ' folder ';
+
+  let categoryName = document.createElement('span');
+  categoryName.innerText = name;
+
+  li.appendChild(icon);
+  li.appendChild(categoryName);
+
+  return li;
+}
+
+function renderAllCategories() {
+  let categories = getAllCategories();
+
+  for (let each of categories) {
+    categoryList.appendChild(renderCategory(each));
+  }
 }
 
 renderAllTasks();
-getAllCategories();
+renderAllCategories();
