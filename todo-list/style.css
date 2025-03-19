@@ -42,7 +42,7 @@ ul.categories li {
 
 ul.tasks li:hover,
 ul.categories li:hover {
-  background-color: #58b2dc;
+  background-color: #f3f3f5;
 }
 
 main {
@@ -71,16 +71,42 @@ main h2 {
   margin-bottom: 20px;
   border: 1px solid #b0b0b5;
   border-radius: 8px;
+  gap: 20px;
 }
 
-.item-low {
-  border-left: 8px solid #22c55e;
+.task-item .info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
-.item-medium {
-  border-left: 8px solid #eab308;
+.task-item .operations {
+  display: flex;
+  gap: 10px;
 }
 
-.item-high {
-  border-left: 8px solid #ef4444;
+.task-item button {
+  border: 1px solid #b0b0b5;
+  background: none;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.task-item button:hover {
+  border: 1px solid #36ad6a;
+  color: #36ad6a;
+}
+
+.priority-low {
+  border-left: 8px solid #18a058;
+}
+
+.priority-medium {
+  border-left: 8px solid #f0a020;
+}
+
+.priority-high {
+  border-left: 8px solid #d03050;
 }
