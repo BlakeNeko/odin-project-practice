@@ -13,9 +13,36 @@
   display: flex;
 }
 
+ul {
+  list-style-type: none;
+}
+
 nav {
   flex: 1;
   border-right: 1px solid #b0b0b5;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+nav h1 {
+  text-align: center;
+}
+
+ul.tasks li,
+ul.categories li {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+ul.tasks li:hover,
+ul.categories li:hover {
+  background-color: #58b2dc;
 }
 
 main {
