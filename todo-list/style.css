@@ -15,10 +15,12 @@
 
 nav {
   flex: 1;
+  border-right: 1px solid #b0b0b5;
 }
 
 main {
   flex: 2;
+  border-right: 1px solid #b0b0b5;
 }
 
 aside {
