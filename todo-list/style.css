@@ -48,8 +48,46 @@ ul.categories li:hover {
 main {
   flex: 2;
   border-right: 1px solid #b0b0b5;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+main header {
+  margin-bottom: 30px;
+}
+
+main h2 {
+  margin-bottom: 10px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #b0b0b5;
+  border-radius: 8px;
+}
+
+.low {
+  border-left: 8px solid #22c55e;
+}
+
+.medium {
+  border-left: 8px solid #eab308;
+}
+
+.high {
+  border-left: 8px solid #ef4444;
 }
 
 aside {
   flex: 2;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
