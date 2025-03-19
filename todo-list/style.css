@@ -46,7 +46,7 @@ ul.categories li:hover {
 }
 
 main {
-  flex: 2;
+  flex: 3;
   border-right: 1px solid #b0b0b5;
   padding: 30px;
   display: flex;
@@ -83,35 +83,4 @@ main h2 {
 
 .item-high {
   border-left: 8px solid #ef4444;
-}
-
-aside {
-  flex: 2;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-aside header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-aside .edit-button {
-  cursor: pointer;
-  user-select: none;
-}
-
-.text-low {
-  color: #22c55e;
-}
-
-.text-medium {
-  color: #eab308;
-}
-
-.text-high {
-  color: #ef4444;
 }
