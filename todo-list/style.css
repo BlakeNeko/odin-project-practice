@@ -73,15 +73,15 @@ main h2 {
   border-radius: 8px;
 }
 
-.low {
+.item-low {
   border-left: 8px solid #22c55e;
 }
 
-.medium {
+.item-medium {
   border-left: 8px solid #eab308;
 }
 
-.high {
+.item-high {
   border-left: 8px solid #ef4444;
 }
 
@@ -90,4 +90,28 @@ aside {
   padding: 30px;
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+
+aside header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+aside .edit-button {
+  cursor: pointer;
+  user-select: none;
+}
+
+.text-low {
+  color: #22c55e;
+}
+
+.text-medium {
+  color: #eab308;
+}
+
+.text-high {
+  color: #ef4444;
 }
