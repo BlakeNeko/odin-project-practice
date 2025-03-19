@@ -109,4 +109,14 @@ function renderTask(task) {
   return li;
 }
 
+function getAllCategories() {
+  let categories = new Set();
+  for (let each of tasks) {
+    categories.add(each.category);
+  }
+
+  console.log(categories);
+}
+
 renderAllTasks();
+getAllCategories();
