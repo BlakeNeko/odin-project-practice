@@ -122,6 +122,9 @@ function getAllCategories() {
 function createCategoryElement(name) {
   let li = document.createElement('li');
   li.setAttribute('data-category', name);
+  li.addEventListener('click', function () {
+    console.log(li.getAttribute('data-category'));
+  });
 
   let icon = document.createElement('span');
   icon.classList.add('material-symbols-outlined');
