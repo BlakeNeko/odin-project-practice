@@ -154,7 +154,7 @@ footer h2 {
   }
 
   header .card {
-    background-image: url(./assets/header-mobile.jpg);
+    background-image: url(./assets/header.jpg);
     flex: 2;
   }
 
@@ -184,5 +184,9 @@ footer h2 {
   main ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  main .card img {
+    height: 26rem;
   }
 }
