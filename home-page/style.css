@@ -145,3 +145,44 @@ footer h2 {
     height: 12rem;
   }
 }
+
+/* 桌面 */
+@media screen and (min-width: 1024px) {
+  header {
+    display: flex;
+    margin-bottom: 4rem;
+  }
+
+  header .card {
+    background-image: url(./assets/header-mobile.jpg);
+    flex: 2;
+  }
+
+  section.about {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+    padding: 3rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background-color: #ffffff;
+  }
+
+  section.about h2 {
+    text-align: left;
+  }
+
+  section.about p {
+    flex: 1;
+  }
+
+  section.about ul {
+    justify-content: end;
+    gap: 1rem;
+  }
+
+  main ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
