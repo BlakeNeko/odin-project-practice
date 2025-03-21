@@ -124,3 +124,24 @@ footer h2 {
   object-fit: cover;
   width: 100%;
 }
+
+/* 平板 */
+@media screen and (min-width: 768px) {
+  header .card {
+    height: 30rem;
+    background-image: url(./assets/header.jpg);
+  }
+
+  main ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main .card {
+    height: 100%;
+  }
+
+  main .card img {
+    height: 12rem;
+  }
+}
