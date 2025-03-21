@@ -108,3 +108,19 @@ main .card .info .title {
   justify-content: space-between;
   margin-bottom: 1rem;
 }
+
+/* 底部 */
+footer {
+  padding: 2rem;
+  background-color: #fceae2;
+}
+
+footer h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.footer-img {
+  object-fit: cover;
+  width: 100%;
+}
