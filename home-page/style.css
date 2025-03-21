@@ -32,7 +32,7 @@ header {
 
 header .card {
   height: 40rem;
-  background-image: url(./assets/header.jpg);
+  background-image: url(./assets/header-mobile.jpg);
   background-size: cover;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   display: flex;
