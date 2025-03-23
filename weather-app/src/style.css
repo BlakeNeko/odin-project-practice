@@ -70,3 +70,72 @@ button:hover {
 button:active {
   transform: scale(0.95);
 }
+
+.hidden {
+  display: none;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin-bottom: 24px;
+}
+
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#city-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+#current-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.temperature {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+#temperature {
+  font-size: 2.5rem;
+}
+
+.weather-condition {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+#weather-text {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #1d1d1d;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.detail-item {
+  text-align: center;
+  flex: 1;
+}
+
+.detail-label {
+  color: #666;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.empty-state p {
+  text-align: center;
+}
