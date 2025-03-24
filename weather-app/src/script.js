@@ -45,3 +45,24 @@ async function getWeatherData(cityName) {
     return null;
   }
 }
+
+function processJsonData(jsonData) {
+  let date = new Date();
+  // 获取年、月、日
+  let year = date.getFullYear();
+  let month = date.getMonth() + 1; // getMonth() 返回的月份是从0开始的，所以需要加1
+  let day = date.getDate();
+  let formattedDate = `${year}年${month}月${day}日`;
+
+  let processedData = {
+    cityName: jsonData.resolvedAddress,
+    currentDate: formattedDate,
+    temperature: jsonData.currentConditions.temp,
+    weatherText: jsonData.currentConditions.conditions,
+    humidity: jsonData.currentConditions.humidity,
+    windSpeed: jsonData.currentConditions.windspeed,
+    pressure: jsonData.currentConditions.pressure,
+  };
+
+  return processedData;
+}
