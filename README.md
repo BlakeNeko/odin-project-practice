@@ -18,3 +18,4 @@
 | Small Library   | [Code](https://github.com/BlakeNeko/odin-project-practice/tree/main/small-library)   |
 | Tic Tac Toe     | [Code](https://github.com/BlakeNeko/odin-project-practice/tree/main/tic-tac-toe)     |
 | Todo List       | Unfinishied                                                                          |
+| Weather App     | [Code](https://github.com/BlakeNeko/odin-project-practice/tree/main/weather-app)     |
