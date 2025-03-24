@@ -12,3 +12,8 @@ const weatherText = document.getElementById('weather-text');
 const humidity = document.getElementById('humidity');
 const windSpeed = document.getElementById('wind-speed');
 const pressure = document.getElementById('pressure');
+
+function toggleWeatherInfo() {
+  emptyState.classList.toggle('hidden');
+  weatherInfo.classList.toggle('hidden');
+}
