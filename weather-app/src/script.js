@@ -35,13 +35,13 @@ async function getWeatherData(cityName) {
     let response = await fetch(fullURL);
 
     if (!response.ok) {
-      throw new Error(`Error: ${response.status}`);
+      throw new Error(`错误：${response.status}`);
     }
 
     let jsonData = await response.json();
     return jsonData;
   } catch (error) {
-    console.log(`Error: ${error}`);
+    alert(error.message);
     return null;
   }
 }
