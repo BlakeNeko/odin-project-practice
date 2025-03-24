@@ -66,3 +66,14 @@ function processJsonData(jsonData) {
 
   return processedData;
 }
+
+function updateDOM(processedData) {
+  cityName.textContent = processedData.cityName;
+  currentDate.textContent = processedData.currentDate;
+  temperature.textContent = `${processedData.temperature} °C`;
+  weatherText.textContent = processedData.weatherText;
+  humidity.textContent = `${processedData.humidity} %`;
+  windSpeed.textContent = `${processedData.windSpeed} km/h`;
+  pressure.textContent = `${processedData.pressure} hPa`;
+}
+
