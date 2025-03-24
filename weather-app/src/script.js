@@ -34,14 +34,14 @@ async function getWeatherData(cityName) {
   try {
     let response = await fetch(fullURL);
 
-      if (!response.ok) {
-        throw new Error(`Error: ${response.status}`);
-      }
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status}`);
+    }
 
     let jsonData = await response.json();
     return jsonData;
   } catch (error) {
-      console.log(`Error: ${error}`);
+    console.log(`Error: ${error}`);
     return null;
   }
 }
@@ -77,3 +77,15 @@ function updateDOM(processedData) {
   pressure.textContent = `${processedData.pressure} hPa`;
 }
 
+async function handleSearchClick() {
+  let cityName = cityNameInput.value;
+  let jsonData = await getWeatherData(cityName);
+  let processedData = processJsonData(jsonData);
+
+  updateDOM(processedData);
+  toggleWeatherInfo();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  searchButton.addEventListener('click', handleSearchClick);
+});
