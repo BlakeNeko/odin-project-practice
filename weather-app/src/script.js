@@ -22,7 +22,7 @@ function toggleWeatherInfo() {
   weatherInfo.classList.toggle('hidden');
 }
 
-function getWeatherData(cityName) {
+async function getWeatherData(cityName) {
   const params = new URLSearchParams({
     unitGroup: 'metric',
     lang: 'zh',
@@ -30,17 +30,18 @@ function getWeatherData(cityName) {
   });
 
   let fullURL = `${apiURL}${cityName}?${params.toString()}`;
-  fetch(fullURL)
-    .then((response) => {
+
+  try {
+    let response = await fetch(fullURL);
+
       if (!response.ok) {
         throw new Error(`Error: ${response.status}`);
       }
-      return response.json();
-    })
-    .then((jsonData) => {
-      console.log(jsonData);
-    })
-    .catch((error) => {
+
+    let jsonData = await response.json();
+    return jsonData;
+  } catch (error) {
       console.log(`Error: ${error}`);
-    });
+    return null;
+  }
 }
