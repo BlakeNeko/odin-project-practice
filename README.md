@@ -19,3 +19,5 @@
 | Tic Tac Toe     | [Code](https://github.com/BlakeNeko/odin-project-practice/tree/main/tic-tac-toe)     |
 | Todo List       | Unfinishied                                                                          |
 | Weather App     | [Code](https://github.com/BlakeNeko/odin-project-practice/tree/main/weather-app)     |
+| Recursion       | [Code](https://github.com/BlakeNeko/odin-project-practice/tree/main/recursion)       |
+| Linked Lists    | [Code](https://github.com/BlakeNeko/odin-project-practice/tree/main/linked-lists)    |
